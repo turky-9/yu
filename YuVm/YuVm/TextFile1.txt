@@ -1,0 +1,38 @@
+﻿#今のところ大域変数のみ
+#演算は正数 + 正数 or 変数 + 正数のみ
+
+
+stat:vardefstat
+	|assignstat
+	|expstat
+	|procdefstat
+	|callstat
+
+
+
+callstat:call symbol lparen rparen semic
+procdefstat:def symbol lbrace {stat} rbrace
+vardefstat:var symbol semic
+assignstat:let symbol equal expstat
+expstat:term {exp term};
+term:symbol | number
+
+
+
+
+
+semic:';'
+symbol:([a-z]|[A-Z])+
+var:[vV][aA][rR]
+exp:'+'
+equal:'='
+number:[0-9]+
+
+let:[lL][eE][tT]
+def:[dD][eE][fF]
+call:[cC][aA][lL][lL]
+
+lbrace:'{'
+rbrace:'}'
+lparen:'('
+rparen:')'

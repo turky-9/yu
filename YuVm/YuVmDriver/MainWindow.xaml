@@ -1,0 +1,20 @@
+﻿<Window x:Class="YuVmDriver.MainWindow"
+xml:space="preserve"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Button Content="Button" Height="39" HorizontalAlignment="Left" Margin="426,12,0,0" Name="button1" VerticalAlignment="Top" Width="65" Click="button1_Click" />
+        <DataGrid AutoGenerateColumns="True" Height="114" HorizontalAlignment="Left" Margin="12,12,0,0" Name="dgMem" VerticalAlignment="Top" Width="128" />
+        <DataGrid AutoGenerateColumns="True" Height="114" HorizontalAlignment="Left" Margin="174,12,0,0" Name="dgStack" VerticalAlignment="Top" Width="128" />
+        <TextBox Height="144" HorizontalAlignment="Left" Margin="12,144,0,0" Name="txtSrc" VerticalAlignment="Top" Width="479" AcceptsReturn="True" VerticalScrollBarVisibility="Auto">var x;
+11+22;
+let x = 1 + 2;
+let x = x + 1;
+call proc();
+def proc{
+let x = x + x;
+}</TextBox>
+        <Button Content="Button" Height="39" HorizontalAlignment="Left" Margin="426,99,0,0" Name="button2" VerticalAlignment="Top" Width="65" Click="button2_Click" />
+    </Grid>
+</Window>

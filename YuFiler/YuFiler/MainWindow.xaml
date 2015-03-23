@@ -1,0 +1,20 @@
+﻿<Window x:Class="YuFiler.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Yu Filer βver" Height="500" Width="800" xmlns:my="clr-namespace:YuFiler" Icon="/YuFiler;component/YuFiler.ico"
+        xmlns:api="clr-namespace:Microsoft.WindowsAPICodePack.Controls.WindowsPresentationFoundation;assembly=Microsoft.WindowsAPICodePack.Shell">
+    <Grid Name="LayoutRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition MinHeight="10"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition MinHeight="10"/>
+        </Grid.RowDefinitions>
+        <!--
+        <Button Content="test" Margin="32,12,632,398" Click="Button_Click" />
+        <api:ExplorerBrowser Name="hoge" Margin="48,69,12,21" CommandsOrganizePane="Hide" CommandsPane="Hide" CommandsViewPane="Hide" AdvancedQueryPane="Hide" DetailsPane="Hide" PreviewPane="Hide" QueryPane="Hide" NavigationPane="Hide" />
+-->
+        <my:FilerUI x:Name="filerUI1" Grid.Row="0"/>
+        <GridSplitter ResizeDirection="Rows" Height="5" Width="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="1" ResizeBehavior="BasedOnAlignment" Background="#FF404040"/>
+        <my:FilerUI x:Name="filerUI2" Grid.Row="2"/>
+    </Grid>
+</Window>
